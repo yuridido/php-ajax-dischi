@@ -24,9 +24,11 @@ main {
 }
 
 .disco {
+  background-color: #000;
+  color: #FFF;
   width: 200px;
   height: 360px;
-  margin: 0 50px;
+  margin: 30px 50px;
   text-align: center;
 }
 
