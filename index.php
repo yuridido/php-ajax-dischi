@@ -25,7 +25,9 @@ include __DIR__ . '/src/db.php';
             <div class="container">
                 <?php foreach ($database as $disco) {?>
                 <div class="disco">
-                    <img src="<?php echo $disco['poster'] ?>" alt="foto disco">
+                    <div class="copertina">
+                        <img src="<?php echo $disco['poster'] ?>" alt="foto disco">
+                    </div>
                     <h2><?php echo $disco['author'] ?></h2>
                     <p><?php echo $disco['year'] ?></p>
                     <p><?php echo $disco['title'] ?></p>
