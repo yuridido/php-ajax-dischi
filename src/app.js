@@ -2,6 +2,8 @@
 //
 $(document).ready(function(){
     chiamata();
+    select();
+
 
 
 
@@ -29,6 +31,33 @@ function chiamata(){
                     console.log(context);
                     var html = template(context);
                     $('.container').append(html);
+                }
+            },
+            error: function(){
+                alert(errore);
+            },
+
+        }
+    )
+}
+
+
+//funzione per riempire la select
+function select(){
+    $.ajax(
+        {
+            url: 'http://localhost/php-ajax-dischi/src/server.php',
+            method: 'GET',
+            success: function(risposta){
+                // console.log(risposta);
+                var source = $("#select-template").html();
+                var template = Handlebars.compile(source);
+                for (var i = 0; i < risposta.length; i++) {
+                    var context = {
+                        'autore': risposta[i].author,
+                    };
+                    var html = template(context);
+                    $('.autori').append(html);
                 }
             },
             error: function(){

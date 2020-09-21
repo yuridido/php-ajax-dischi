@@ -21,6 +21,7 @@
     <body>
         <header>
             <select class="autori" name="autori">
+                <option value=" ">Tutti</option>
 
             </select>
 
@@ -40,6 +41,10 @@
                 <p>{{autore}}</p>
                 <p>{{anno}}</p>
             </div>
+        </script>
+        <script id="select-template" type="text/x-handlebars-template">
+            <option value="{{autore}}">{{autore}}</option>
+
         </script>
 
 

@@ -40,7 +40,6 @@ main {
 }
 
 .copertina img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 100%;
 }
 
