@@ -1,10 +1,11 @@
-// var $ = require('jquery');
-//
+var $ = require('jquery');
+
 $(document).ready(function(){
-    chiamataSelect(" ");
+    var cantante = $('select.autori').val();
+    chiamataSelect(cantante);
     select();
-    $('select').on('change', $('select'), function() {
-        var cantante = $(this).val();
+    $('select.autori').on('change', $('select.autori'), function() {
+        cantante = $(this).val();
         console.log(cantante);
         chiamataSelect(cantante);
     });
